@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+</head>
+<body>
+    <header>
+        <h1>Контакты</h1>
+        <nav aria-label="Основное меню">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О себе</a></li>
+                <li><a href="hobbies.html">Хобби</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <nav aria-label="Православие">
+            <ol>
+                <li><a href="index.html">Главная</a></li>
+                 <li aria-current="page">Текущая страница</li>
+            </ol>
+        </nav>  
+    </header>
+    <main id="content">
+        <section class="methods-feedback">
+            <h2>Способы связи:</h2>
+            <ol>
+                <li>Почта</li>
+                <li><a href="https://github.com/Tsntnb">GitHub</a></li>
+                <li>Discord - imtechnoinside</li>
+            </ol>
+        </section>
+        <section class="email-feedback">
+            <form>
+              <div>
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div>
+                <label for="subject">Тема:</label>
+                <select id="subject" name="subject">
+                  <option>Общий вопрос</option>
+                  <option>Написать молитву</option>
+                  <option>Хочу попробовать вашу кутью</option>
+                </select>
+              </div>
+              <div>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit">Отправить</button>
+            </form>         
+        </section>
+    </main>    
+    <footer>
+        <hr>
+        <p>&copy; 2025 Tnstnb. Все права защищены.</p>
+    </footer>
+</body>
+</html>
