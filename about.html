@@ -3,70 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обо мне</title>
+    <meta name="description" content="Обо мне — Донат Богомолов">
+    <meta name="author" content="Не Донат Богомолов">
+    <title>Донат Богомолов - О себе</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Шапка сайта -->
-    <header>
-        <h1>О себе</h1>
-        <nav aria-label="Основное меню">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html" class="active">О себе</a></li>
-                <li><a href="hobbies.html">Хобби</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <nav aria-label="Хлебные крошки">
-            <ol>
-                <li><a href="index.html">Главная</a></li>
-                <li aria-current="page">О себе</li>
-            </ol>
-        </nav>  
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">Донат Богомолов</h1>
+                <nav aria-label="Основное меню">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="about.html" class="nav-link active">О себе</a></li>
+                        <li><a href="hobbies.html" class="nav-link">Хобби</a></li>
+                        <li><a href="gallery.html" class="nav-link">Галерея</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Хлебные крошки -->
+        <div class="container">
+            <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                <ol>
+                    <li><a href="index.html">Главная</a></li>
+                    <li aria-current="page">О себе</li>
+                </ol>
+            </nav>
+        </div>
     </header>
-     <!-- Основное содержимое -->
-    <main id="content">
-        <section class="edu">
-            <h2>Образование:</h2>
-            <li>Дошкольное обучение игре на пианино</li>
-            <li>Три класса церковно приходской школы</li>
-            <li>Высшее церковное образование (в процессе получения)</li>
-        </section>
-        <section class="work">
-            <h2>Работа:</h2>
-            <li>Храм в городе 2020 - 2024</li>
-            <li>Церковь в деревне с 2025 года</li>
-        </section>
-        <section class="skills">
-            <h2>Навыки:</h2>
-            <ul>
-                <li>Могу правильно проводить церковные обряды</li>
-                <li>Отлично делаю контур бороды (себе)</li>
-                <li>Бесподобно готовлю кутью</li>
-            </ul>
-        </section>
-        <section class="achieve">
-            <h2>Достижения:</h2>
-            <ol>
-                <li>Выжил</li>
-                <li>Побывал в Иерусалиме</li>
-                <li>Летал на самолете, чтобы быть ближе к Богу</li>
-                <li>Зашил дырки в штанах</li>
-            </ol>
-        </section>
-        <h2>Личная информация:</h2>
-        <table>
-            <tr> <th>Параметр</th> <th>Значение</th> </tr>
-            <tr> <td>Возраст</td> <td>70 лет</td> </tr>
-            <tr> <td>Село</td> <td>Ильинское</td> </tr>
-            <tr> <td>Языки</td> <td>Русский, Церковный</td> </tr>
-        </table>
-    </main>    
+
+    <!-- Основное содержимое -->
+    <main id="content" class="main-content">
+        <div class="container">
+            <div class="content-sections">
+                <section class="edu panel">
+                    <h2>Образование:</h2>
+                    <ul class="custom-list">
+                        <li>Дошкольное обучение игре на пианино</li>
+                        <li>Три класса церковно-приходской школы</li>
+                        <li>Высшее церковное образование (в процессе получения)</li>
+                    </ul>
+                </section>
+
+                <section class="work panel">
+                    <h2>Работа:</h2>
+                    <ul class="custom-list">
+                        <li>Храм в городе (2020–2024)</li>
+                        <li>Церковь в деревне (с 2025 года)</li>
+                    </ul>
+                </section>
+
+                <section class="skills panel">
+                    <h2>Навыки:</h2>
+                    <ul class="custom-list">
+                        <li>Могу правильно проводить церковные обряды</li>
+                        <li>Отлично делаю контур бороды (себе)</li>
+                        <li>Бесподобно готовлю кутью</li>
+                    </ul>
+                </section>
+
+                <section class="achieve panel">
+                    <h2>Достижения:</h2>
+                    <ol class="custom-list">
+                        <li>Выжил</li>
+                        <li>Побывал в Иерусалиме</li>
+                        <li>Летал на самолёте, чтобы быть ближе к Богу</li>
+                        <li>Зашил дырки в штанах</li>
+                    </ol>
+                </section>
+
+                <section class="personal-info panel">
+                    <h2>Личная информация:</h2>
+                    <table class="info-table">
+                        <thead>
+                            <tr>
+                                <th>Параметр</th>
+                                <th>Значение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Возраст</td>
+                                <td>70 лет</td>
+                            </tr>
+                            <tr>
+                                <td>Село</td>
+                                <td>Ильинское</td>
+                            </tr>
+                            <tr>
+                                <td>Языки</td>
+                                <td>Русский, Церковный</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </main>
+
     <!-- Подвал сайта -->
-    <footer>
-        <hr>
-        <p>&copy; 2025 Tnstnb. Все права защищены.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Донат Богомолов</h3>
+                    <p>Церковный программист на HTML</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Tsntnb" class="social">GitHub</a>
+                        <a href="http://discordapp.com/users/573903636480917515" class="social">Discord</a>
+                        <a href="mailto:donate@bogomolov.ru" class="social">Email</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О себе</a></li>
+                        <li><a href="hobbies.html">Хобби</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p>Email: donate@bogomolov.ru</p>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <hr>
+                <p>&copy; 2025 Tnstnb. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

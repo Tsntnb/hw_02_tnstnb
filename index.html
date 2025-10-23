@@ -6,60 +6,108 @@
     <meta name="description" content="Про Доната Богомолова">
     <meta name="author" content="Не Донат Богомолов">
     <title>Донат Богомолов - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-      <!-- Шапка сайта -->
-    <header>
-        <h1>Донат Богомолов</h1>
-        <p>Церковный программист на HTML</p> 
-        <nav aria-label="Основное меню">
-            <ul>
-                <li><a href="index.html" class="active">Главная</a></li>
-                <li><a href="about.html">О себе</a></li>
-                <li><a href="hobbies.html">Хобби</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <nav aria-label="Хлебные крошки">
-            <ol>
-                <li><a href="index.html">Главная</a></li>
-                <li aria-current="page">Текущая страница</li>
-            </ol>
-        </nav>
- 
-    </header>
-    <!-- Основное содержимое -->
-    <main id="content">
-        <div class="donate_bogomoloff">
-            <img 
-            src="img/donate_bogomoloff.png"
-            width="270"
-            height="400" 
-            alt="Донат Богомолов"
-            >
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">Донат Богомолов</h1>
+                <nav aria-label="Основное меню">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link active">Главная</a></li>
+                        <li><a href="about.html" class="nav-link">О себе</a></li>
+                        <li><a href="hobbies.html" class="nav-link">Хобби</a></li>
+                        <li><a href="gallery.html" class="nav-link">Галерея</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <section class="hi">
-            <h2>Привет, посетитель!</h2>
-            <p>Рад видеть тебя на своём сайте!</p>
-        </section>
-        <section class="about">
-            <h2>О себе:</h2>
-            <p>Меня зовут Донат Богомолов, я церковный веб-разработчик.</p>
-            <p>Учусь новейшим технологиям доступным мне опосля окончания церковноприходской школы.</p>
-            <p>Стараюсь выживать в современности - делаю сайты, зарабатывая себе на хлебушек.</p>
-        </section>
-        <section class="interests">
-            <h2>Мои интересы:</h2>
-            <p>Я увлекаюсь молитвами, походами по грибы, чтением псальтыря</p>
-            <p>И также очень сильно увлекаюсь программированием на HTML.</p>
-            <p>А ещё я очень люблю кушать пончики, так называемые донаты.</p>
-        </section>
+    </header>
+    
+    <!-- Основное содержимое -->
+    <main id="content" class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="donate_bogomoloff">
+                    <div class="card card-image">
+                        <img src="img/donate_bogomoloff.png" alt="Донат Богомолов">
+                    </div>
+                </div>
+                <div class="content-sections">
+                    <section class="hero">
+                        <div class="hero-content">
+                            <h1>Добро пожаловать, странник!</h1>
+                            <p>Чайку не предложу, но пончик — точно найду (у тебя) 😊</p>
+                        </div>
+                    </section>
+                    <section class="about panel">
+                        <h2>О себе:</h2>
+                        <p>Меня зовут Донат Богомолов, я церковный веб-разработчик.</p>
+                        <p>После трёх классов церковно-приходской школы я не остановился: осваиваю современные технологии.</p>
+                        <p>Сайты верстаю, хлебушек зарабатую — выживаю по-христиански: с молитвой и с кодом.</p>
+                        <ul class="custom-list">
+                            <li>Церковный программист</li>
+                            <li>Любитель пончиков</li>
+                            <li>HTML-мастер</li>
+                        </ul>
+                    </section>
+                    <section class="interests panel">
+                        <h2>Мои интересы:</h2>
+                        <p>Я увлекаюсь молитвами, походами по грибы, чтением псальтыря</p>
+                        <p>И также очень сильно увлекаюсь программированием на HTML.</p>
+                        <p>А ещё я очень люблю кушать пончики, так называемые донаты.</p>
+                        <div class="badges">
+                            <span class="badge first">Молитвы</span>
+                            <span class="badge second">Грибы</span>
+                            <span class="badge third">HTML</span>
+                            <span class="badge fourth">Пончики</span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
     </main>
+    
     <!-- Подвал сайта -->
-    <footer>
-        <hr>
-        <p>&copy; 2025 Tnstnb. Все права защищены.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Донат Богомолов</h3>
+                    <p>Церковный программист на HTML</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Tsntnb" class="social">GitHub</a>
+                        <a href="http://discordapp.com/users/573903636480917515" class="social">Discord</a>
+                        <a href="mailto:donate@bogomolov.ru" class="social">Email</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О себе</a></li>
+                        <li><a href="hobbies.html">Хобби</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p>Email: donate@bogomolov.ru</p>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <hr>
+                <p>&copy; 2025 Tnstnb. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

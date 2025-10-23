@@ -3,68 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты</title>
+    <meta name="description" content="Контакты Доната Богомолова — напишите мне!">
+    <meta name="author" content="Не Донат Богомолов">
+    <title>Донат Богомолов - Контакты</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Шапка сайта -->
-    <header>
-        <h1>Контакты</h1>
-        <nav aria-label="Основное меню">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О себе</a></li>
-                <li><a href="hobbies.html">Хобби</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="contacts.html" class="active">Контакты</a></li>
-            </ul>
-        </nav>
-        <nav aria-label="Хлебные крошки">
-            <ol>
-                <li><a href="index.html">Главная</a></li>
-                <li aria-current="page">Контакты</li>
-            </ol>
-        </nav>  
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">Донат Богомолов</h1>
+                <nav aria-label="Основное меню">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="about.html" class="nav-link">О себе</a></li>
+                        <li><a href="hobbies.html" class="nav-link">Хобби</a></li>
+                        <li><a href="gallery.html" class="nav-link">Галерея</a></li>
+                        <li><a href="contacts.html" class="nav-link active">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Хлебные крошки -->
+        <div class="container">
+            <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                <ol>
+                    <li><a href="index.html">Главная</a></li>
+                    <li aria-current="page">Контакты</li>
+                </ol>
+            </nav>
+        </div>
     </header>
+
     <!-- Основное содержимое -->
-    <main id="content">
-        <section class="methods-feedback">
-            <h2>Способы связи:</h2>
-            <ol>
-                <li>Почта</li>
-                <li><a href="https://github.com/Tsntnb">GitHub</a></li>
-                <li>Discord - imtechnoinside</li>
-            </ol>
-        </section>
-        <section class="email-feedback">
-            <form>
-              <div>
-                <label for="name">Ваше имя:</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div>
-                <label for="subject">Тема:</label>
-                <select id="subject" name="subject">
-                  <option>Общий вопрос</option>
-                  <option>Написать молитву</option>
-                  <option>Хочу попробовать вашу кутью</option>
-                </select>
-              </div>
-              <div>
-                <label for="message">Сообщение:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit">Отправить</button>
-            </form>         
-        </section>
-    </main>  
-    <!-- Подвал сайта -->  
-    <footer>
-        <hr>
-        <p>&copy; 2025 Tnstnb. Все права защищены.</p>
+    <main id="content" class="main-content">
+        <div class="container">
+            <div class="content-sections">
+                <section class="methods-feedback panel">
+                    <h2>Способы связи:</h2>
+                    <ol class="custom-list">
+                        <li>Почта: <a href="mailto:donate@bogomolov.ru">donate@bogomolov.ru</a></li>
+                        <li><a href="https://github.com/Tsntnb" target="_blank">GitHub</a></li>
+                        <li>Discord: <code>imtechnoinside</code></li>
+                    </ol>
+                </section>
+
+                <section class="email-feedback panel">
+                    <h2>Написать мне:</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Тема:</label>
+                            <select id="subject" name="subject">
+                                <option>Общий вопрос</option>
+                                <option>Написать молитву</option>
+                                <option>Хочу попробовать вашу кутью</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Отправить</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Донат Богомолов</h3>
+                    <p>Церковный программист на HTML</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Tsntnb" class="social">GitHub</a>
+                        <a href="http://discordapp.com/users/573903636480917515" class="social">Discord</a>
+                        <a href="mailto:donate@bogomolov.ru" class="social">Email</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О себе</a></li>
+                        <li><a href="hobbies.html">Хобби</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p>Email: donate@bogomolov.ru</p>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <hr>
+                <p>&copy; 2025 Tnstnb. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
