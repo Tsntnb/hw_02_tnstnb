@@ -168,18 +168,24 @@ body {
     padding: 2.5rem 0;
     position: relative;
     margin-bottom: 0;
+    z-index: 1; /* Убедимся, что контент находится поверх слоя перехода */
 }
 
-.main-content::before {
+/* Добавляем плавный переход между основным контентом и футером */
+.main-content::after {
     content: '';
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 15, 15, 0)), color-stop(70%, rgba(26, 37, 47, 0.4)), to(rgba(26, 37, 47, 0.8)));
-    background: linear-gradient(180deg, rgba(19, 15, 15, 0) 0%, rgba(26, 37, 47, 0.4) 70%, rgba(26, 37, 47, 0.8) 100%);
     position: absolute;
-    z-index: -1;
+    bottom: -1px; /* Размещаем прямо над футером */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Высота зоны перехода */
+    background: linear-gradient(to bottom, 
+                rgba(26, 37, 47, 0) 0%, 
+                rgba(26, 37, 47, 0.3) 30%, 
+                rgba(26, 37, 47, 0.6) 60%, 
+                rgba(26, 37, 47, 0.9) 100%);
+    z-index: 0; /* Поверх фона основного контента, но под контентом */
+    pointer-events: none; /* Не мешаем кликам сквозь этот слой */
 }
 
 .content-grid {
@@ -211,8 +217,8 @@ body {
     height: 100%;
     left: 0;
     top: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 37, 47, 0.8)), to(rgba(13, 19, 25, 0.95)));
-    background: linear-gradient(180deg, rgba(26, 37, 47, 0.8) 0%, rgba(13, 19, 25, 0.95) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 37, 47, 0.9)), to(rgba(13, 19, 25, 0.95)));
+    background: linear-gradient(180deg, rgba(26, 37, 47, 0.9) 0%, rgba(13, 19, 25, 0.95) 100%);
     position: absolute;
     z-index: -1;
 }
