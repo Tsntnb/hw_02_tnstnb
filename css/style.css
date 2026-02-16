@@ -29,6 +29,27 @@ body {
     overflow-x: hidden;
 }
 
+.parallax-container {
+    position: relative;
+    background-image: url('../images/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
 .container {
     width: min(100% - 2rem, var(--container-width));
     margin: 0 auto;
