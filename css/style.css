@@ -1,10 +1,11 @@
 :root {
+    /* Темная тема по умолчанию */
     --primary-color: #17283a;       
-    --secondary-color: #7f8c8d;     
+    --secondary-color: #bdc3c7;     
     --accent-color: #e2b51f;        
-    --text-color: #2c3e50;
-    --background-color: #f9f9f9;
-    --card-bg: #ffffff;
+    --text-color: #ecf0f1;
+    --background-color: #121212;
+    --card-bg: #1e1e1e;
     --footer-bg: #1a252f;
 
     --container-width: 1200px;
@@ -12,6 +13,17 @@
 
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Open Sans', sans-serif;
+}
+
+/* Светлая тема */
+.light-theme {
+    --primary-color: #17283a;       
+    --secondary-color: #7f8c8d;     
+    --accent-color: #e2b51f;        
+    --text-color: #2c3e50;
+    --background-color: #f9f9f9;
+    --card-bg: #ffffff;
+    --footer-bg: #1a252f;
 }
 
 * {
@@ -27,6 +39,37 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     overflow-x: hidden;
+}
+
+/* Кнопка переключения темы */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    color: var(--text-color);
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.theme-icon {
+    width: 24px;
+    height: 24px;
 }
 
 .parallax-container {
