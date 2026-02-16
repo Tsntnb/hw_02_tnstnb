@@ -177,6 +177,10 @@
 }
 
 /* Хлебные крошки */
+.breadcrumbs {
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
 .breadcrumbs ol {
     display: flex;
     list-style: none;
