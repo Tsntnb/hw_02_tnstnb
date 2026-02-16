@@ -266,3 +266,12 @@
     background: var(--accent-color);
     border-color: var(--accent-color);
 }
+
+/* Обновляем цвета хлебных крошек для темной темы */
+.light-theme .breadcrumbs a {
+    color: var(--secondary-color);
+}
+
+.light-theme .breadcrumbs a:hover {
+    color: var(--primary-color);
+}
