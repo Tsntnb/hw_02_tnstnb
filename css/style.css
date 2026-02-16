@@ -189,8 +189,8 @@ body {
     height: 100%;
     left: 0;
     top: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 37, 47, 0)), color-stop(15%, var(--background-color)), color-stop(85%, var(--background-color)), to(rgba(26, 37, 47, 0)));
-    background: linear-gradient(180deg, rgba(26, 37, 47, 0) 0%, var(--background-color) 15%, var(--background-color) 85%, rgba(26, 37, 47, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 15, 15, 0)), color-stop(90%, var(--footer-bg)));
+    background: linear-gradient(180deg, rgba(19, 15, 15, 0) 0%, var(--footer-bg) 90%);
     position: absolute;
     z-index: -1;
 }
