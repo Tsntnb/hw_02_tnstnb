@@ -238,26 +238,17 @@ a:hover {
 .hero {
     text-align: center;
     padding: 4rem 1rem;
-    background: linear-gradient(135deg, #976f02d7 0%, #553a01 100%);
+    background: linear-gradient(135deg, #6a0dad 0%, #4b0082 100%);
     color: white;
     margin-bottom: 3rem;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .hero::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ctext x='60' y='90' font-family='Arial' font-size='100' text-anchor='middle' fill='%23ffffff' opacity='0.08'%3E%E2%98%A6%3C/text%3E%3C/svg%3E");
-    background-size: 120px 120px;
-    animation: rotate 20s linear infinite;
-    z-index: 0;
-    opacity: 0.6;
+    content: none;
 }
 
 .hero-content {
@@ -280,10 +271,7 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-@keyframes rotate {
-    0%, 100% { transform: scale(1); }
-    50%      { transform: scale(1.35); }
-}
+
 
 /* === Параллакс на главной === */
 .parallax-bg {
