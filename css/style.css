@@ -1,5 +1,5 @@
 :root {
-    /* Темная тема по умолчанию */
+
     --primary-color: #17283a;       
     --secondary-color: #bdc3c7;     
     --accent-color: rgb(183, 63, 194);;        
@@ -15,7 +15,7 @@
     --font-secondary: 'Open Sans', sans-serif;
 }
 
-/* Улучшенная темная тема */
+
 body {
     --primary-color: #d8dcdf;       
     --secondary-color: #c8ced1;     
@@ -68,7 +68,7 @@ body {
     padding: 0 1rem;
 }
 
-/* === Шапка === */
+
 .header {
     background-color: transparent;
     backdrop-filter: blur(4px);
@@ -87,7 +87,7 @@ body {
 
 .logo {
     font-family: var(--font-primary);
-    font-size: 2.0rem;
+    font-size: 2.3rem;
     font-weight: 700;
     color: var(--primary-color);
     margin-top: 15px
@@ -133,22 +133,22 @@ body {
     font-weight: 700;
 }
 
-/* === Основное содержимое === */
+
 .main-content {
     padding: 2.5rem 0;
     position: relative;
     margin-bottom: 0;
-    z-index: 1; /* Убедимся, что контент находится поверх слоя перехода */
+    z-index: 1;
 }
 
-/* Добавляем плавный переход между основным контентом и футером */
+/* header to body grad */
 .main-content::after {
     content: '';
     position: absolute;
-    bottom: -1px; /* Размещаем прямо над футером */
+    bottom: -1px; 
     left: 0;
     width: 100%;
-    height: 100px; /* Высота зоны перехода */
+    height: 100px; 
     background: linear-gradient(to bottom, 
                 rgba(30, 30, 30, 0) 0%,
                 rgba(30, 30, 30, 0.1) 10%,
@@ -157,8 +157,8 @@ body {
                 rgba(30, 30, 30, 0.85) 85%,
                 rgba(30, 30, 30, 0.95) 95%,
                 rgba(30, 30, 30, 1) 100%);
-    z-index: 0; /* Поверх фона основного контента, но под контентом */
-    pointer-events: none; /* Не мешаем кликам сквозь этот слой */
+    z-index: 0;
+    pointer-events: none;
 }
 
 .content-grid {
@@ -174,7 +174,7 @@ body {
     gap: 2rem;
 }
 
-/* === Подвал === */
+
 .footer {
     color: #ecf0f1;
     padding: 2.5rem 0 1.5rem;
@@ -258,7 +258,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* === Текстовые элементы === */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
     margin-bottom: 1rem;
@@ -285,7 +285,7 @@ a:hover {
     text-decoration: none;
 }
 
-/* === Hero-секция === */
+
 .hero {
     text-align: center;
     padding: 4rem 1rem;
@@ -337,9 +337,6 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-
-
-/* === Параллакс на главной === */
 .parallax-bg {
     background-attachment: fixed;
     background-position: center;
