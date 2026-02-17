@@ -17,7 +17,7 @@
 
 /* Улучшенная темная тема */
 body {
-    --primary-color: #17283a;       
+    --primary-color: #bdc3c7;       
     --secondary-color: #bdc3c7;     
     --accent-color: #e2b51f;        
     --text-color: #ecf0f1;
@@ -87,9 +87,10 @@ body {
 
 .logo {
     font-family: var(--font-primary);
-    font-size: 1.8rem;
+    font-size: 2.0rem;
     font-weight: 700;
     color: var(--primary-color);
+    margin-top: 15px
 }
 
 .nav-menu {
