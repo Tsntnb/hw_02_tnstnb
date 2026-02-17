@@ -17,8 +17,8 @@
 
 /* Улучшенная темная тема */
 body {
-    --primary-color: #bdc3c7;       
-    --secondary-color: #bdc3c7;     
+    --primary-color: #d8dcdf;       
+    --secondary-color: #c8ced1;     
     --accent-color: rgb(183, 63, 194);        
     --text-color: #ecf0f1;
     --background-color: #121212;
@@ -327,13 +327,13 @@ a:hover {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    color: white;
+    color: #e5e9eb;
     text-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .hero p {
     font-size: 1.25rem;
-    color: #ecf0f1;
+    color: #dde1e2;
     margin-bottom: 2rem;
 }
 
