@@ -2,7 +2,7 @@ function copyIP(ipAddress, serverName) {
     navigator.clipboard.writeText(ipAddress).then(function() {
         const notification = document.createElement('div');
         notification.className = 'copy-notification';
-        notification.textContent = `${serverName} IP скопирован: ${ipAddress}`;
+        notification.textContent = `"${serverName}" IP скопирован: ${ipAddress}`;
         
         notification.style.position = 'fixed';
         notification.style.top = '20px';
@@ -42,9 +42,9 @@ function copyIP(ipAddress, serverName) {
 
 document.addEventListener('DOMContentLoaded', function() {
     const badges = [
-        { selector: '.badge.first', ip: 's1.saturn.ru', name: 'Survival' },
-        { selector: '.badge.second', ip: 's2.saturn.ru', name: 'Minigames' },
-        { selector: '.badge.third', ip: 's3.saturn.ru', name: 'Factions' }
+        { selector: '.badge.first', ip: 's1.saturn.example', name: 'Выживание' },
+        { selector: '.badge.second', ip: 's2.saturn.example', name: 'Ванилла' },
+        { selector: '.badge.third', ip: 's3.saturn.example', name: 'RPG' }
     ];
 
     badges.forEach(badge => {
