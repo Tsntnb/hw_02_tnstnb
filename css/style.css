@@ -2,7 +2,7 @@
     /* Темная тема по умолчанию */
     --primary-color: #17283a;       
     --secondary-color: #bdc3c7;     
-    --accent-color: #e2b51f;        
+    --accent-color: rgb(183, 63, 194);;        
     --text-color: #ecf0f1;
     --background-color: #121212;
     --card-bg: #1e1e1e;
@@ -19,7 +19,7 @@
 body {
     --primary-color: #bdc3c7;       
     --secondary-color: #bdc3c7;     
-    --accent-color: #e2b51f;        
+    --accent-color: rgb(183, 63, 194);        
     --text-color: #ecf0f1;
     --background-color: #121212;
     --card-bg: #1e1e1e;

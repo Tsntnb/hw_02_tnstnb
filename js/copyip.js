@@ -1,17 +1,16 @@
 // Функция для копирования IP-адреса и отображения уведомления
 function copyIP(ipAddress, serverName) {
-    // Копируем IP-адрес в буфер обмена
     navigator.clipboard.writeText(ipAddress).then(function() {
-        // Создаем элемент уведомления
         const notification = document.createElement('div');
         notification.className = 'copy-notification';
         notification.textContent = `${serverName} IP скопирован: ${ipAddress}`;
         
-        // Стилизация уведомления
+        // --- СТИЛИЗАЦИЯ ---
+        // Добавили transition для плавности и начальную opacity 0
         notification.style.position = 'fixed';
         notification.style.top = '20px';
         notification.style.right = '20px';
-        notification.style.backgroundColor = '#4CAF50';
+        notification.style.backgroundColor = '#a74cafff';
         notification.style.color = 'white';
         notification.style.padding = '10px 20px';
         notification.style.borderRadius = '5px';
@@ -19,47 +18,54 @@ function copyIP(ipAddress, serverName) {
         notification.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
         notification.style.fontFamily = "'Roboto', sans-serif";
         
-        // Добавляем уведомление на страницу
+        // Анимационные стили
+        notification.style.opacity = '0'; 
+        notification.style.transition = 'opacity 0.5s ease'; 
+        notification.style.pointerEvents = 'none'; // Чтобы уведомление не перекрывало клики
+        
         document.body.appendChild(notification);
         
-        // Удаляем уведомление через 3 секунды
+        // --- ХАК ДЛЯ ЗАПУСКА АНИМАЦИИ ПОЯВЛЕНИЯ ---
+        // Читаем offsetHeight, чтобы браузер применил стили выше перед изменением opacity
+        notification.offsetHeight; 
+        
+        // Запускаем появление
+        notification.style.opacity = '1';
+        
+        // --- ЛОГИКА ИСЧЕЗНОВЕНИЯ ---
         setTimeout(function() {
-            document.body.removeChild(notification);
-        }, 3000);
+            // Начинаем исчезновение
+            notification.style.opacity = '0';
+            
+            // Удаляем элемент ПОСЛЕ того, как анимация исчезновения закончится (0.5s)
+            setTimeout(function() {
+                if (document.body.contains(notification)) {
+                    document.body.removeChild(notification);
+                }
+            }, 500); // Время должно совпадать с transition (0.5s)
+            
+        }, 1400); // Время отображения уведомления
     }).catch(function(err) {
         console.error('Ошибка при копировании IP-адреса: ', err);
     });
 }
 
-// Добавляем обработчики событий для бейджей при загрузке DOM
+// Обработчики событий (остались без изменений)
 document.addEventListener('DOMContentLoaded', function() {
-    // Находим бейдж Survival и добавляем обработчик
-    const survivalBadge = document.querySelector('.badge.first');
-    if(survivalBadge) {
-        survivalBadge.style.cursor = 'pointer';
-        survivalBadge.title = 'Кликните для копирования IP';
-        survivalBadge.addEventListener('click', function() {
-            copyIP('s1.saturn.ru', 'Survival');
-        });
-    }
-    
-    // Находим бейдж Minigames и добавляем обработчик
-    const minigamesBadge = document.querySelector('.badge.second');
-    if(minigamesBadge) {
-        minigamesBadge.style.cursor = 'pointer';
-        minigamesBadge.title = 'Кликните для копирования IP';
-        minigamesBadge.addEventListener('click', function() {
-            copyIP('s2.saturn.ru', 'Minigames');
-        });
-    }
-    
-    // Находим бейдж Factions и добавляем обработчик
-    const factionsBadge = document.querySelector('.badge.third');
-    if(factionsBadge) {
-        factionsBadge.style.cursor = 'pointer';
-        factionsBadge.title = 'Кликните для копирования IP';
-        factionsBadge.addEventListener('click', function() {
-            copyIP('s3.saturn.ru', 'Factions');
-        });
-    }
+    const badges = [
+        { selector: '.badge.first', ip: 's1.saturn.ru', name: 'Survival' },
+        { selector: '.badge.second', ip: 's2.saturn.ru', name: 'Minigames' },
+        { selector: '.badge.third', ip: 's3.saturn.ru', name: 'Factions' }
+    ];
+
+    badges.forEach(badge => {
+        const el = document.querySelector(badge.selector);
+        if(el) {
+            el.style.cursor = 'pointer';
+            el.title = 'Кликните для копирования IP';
+            el.addEventListener('click', function() {
+                copyIP(badge.ip, badge.name);
+            });
+        }
+    });
 });
