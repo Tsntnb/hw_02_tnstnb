@@ -121,6 +121,18 @@
     font-family: var(--font-primary);
 }
 
+.rules-container h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.rules-container p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
 .info-table {
     width: 100%;
     border-collapse: collapse;
