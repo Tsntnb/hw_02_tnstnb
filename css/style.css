@@ -312,8 +312,7 @@ a:hover {
     background-position: center;
     position: absolute;
     z-index: -1;
-    filter: brightness(0.7);
-    filter: blur(5px);
+    filter: brightness(0.7) blur(3px);
 }
 
 
