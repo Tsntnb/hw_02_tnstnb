@@ -177,6 +177,20 @@ body {
     gap: 2rem;
 }
 
+.server-types.centered-initially {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.server-types:not(.centered-initially) {
+    position: static;
+    transform: none;
+    margin: 0 auto !important;
+    max-width: 800px;
+}
+
 
 .footer {
     color: #ecf0f1;
