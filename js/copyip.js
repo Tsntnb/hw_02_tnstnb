@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const badges = [
         { selector: '.badge.first', ip: 's1.saturn.example', name: 'Выживание' },
         { selector: '.badge.second', ip: 's2.saturn.example', name: 'Ванилла' },
-        { selector: '.badge.third', ip: 's3.saturn.example', name: 'RPG' }
+       // { selector: '.badge.third', ip: 's3.saturn.example', name: 'RPG' }
     ];
 
     badges.forEach(badge => {
