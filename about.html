@@ -106,6 +106,12 @@
                 if(selectedBadge) {
                     selectedBadge.classList.add('selected');
                 }
+                
+                // Удалить класс centered-initially у секции сервера, чтобы она вернулась в нормальное положение
+                const serverTypesSection = document.querySelector('.server-types');
+                if(serverTypesSection) {
+                    serverTypesSection.classList.remove('centered-initially');
+                }
             }
             
             // По умолчанию показываем информацию о Ванилла сервере
@@ -116,6 +122,12 @@
                 containers.forEach(container => {
                     container.style.display = 'none';
                 });
+                
+                // Добавляем класс centered-initially к секции сервера при загрузке страницы
+                const serverTypesSection = document.querySelector('.server-types');
+                if(serverTypesSection && !serverTypesSection.classList.contains('centered-initially')) {
+                    serverTypesSection.classList.add('centered-initially');
+                }
             });
         </script>
     </main>
