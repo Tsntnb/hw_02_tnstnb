@@ -35,16 +35,18 @@
         <div class="container">
             <div class="content-sections">
                 <section class="server-types panel">
-                    <h2>Выберите тип сервера:</h2>
-                    <div class="badges-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
-                        <span class="badge first" onclick="showServerInfo('vanilla')">Ванилла</span>
-                        <span class="badge second" onclick="showServerInfo('survival')">Выживание</span>
-                        <span class="badge third" onclick="showServerInfo('rpg')">RPG</span>
+                    <div class="centered-content">
+                        <h2>Выберите тип сервера:</h2>
+                        <div class="badges-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; justify-content: center;">
+                            <span class="badge first" onclick="showServerInfo('vanilla')">Ванилла</span>
+                            <span class="badge second" onclick="showServerInfo('survival')">Выживание</span>
+                            <span class="badge third" onclick="showServerInfo('rpg')">RPG</span>
+                        </div>
                     </div>
                     
                     <div id="server-info-container">
                         <!-- Ванилла сервер -->
-                        <div id="vanilla-info" class="server-info-content">
+                        <div id="vanilla-info" class="server-info-content" style="display: none;">
                             <h3>Ванилла сервер</h3>
                             <p>Чистый Minecraft без модификаций и плагинов. Играйте в оригинальный опыт Mojang без каких-либо изменений. Идеально подходит для тех, кто хочет насладиться игрой в её изначальном виде.</p>
                             <ul class="custom-list">
@@ -80,42 +82,6 @@
                         </div>
                     </div>
                 </section>
-                
-                <section class="team panel">
-                    <h2>Команда сервера:</h2>
-                    <ul class="custom-list">
-                        <li>Опытные администраторы</li>
-                        <li>Талантливые разработчики</li>
-                        <li>Креативные дизайнеры</li>
-                        <li>Активная модерация</li>
-                    </ul>
-                </section>
-
-                <section class="stats panel">
-                    <h2>Статистика сервера:</h2>
-                    <table class="info-table">
-                        <thead>
-                            <tr>
-                                <th>Параметр</th>
-                                <th>Значение</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Игроков онлайн</td>
-                                <td>до 200</td>
-                            </tr>
-                            <tr>
-                                <td>Участников</td>
-                                <td>более 5000</td>
-                            </tr>
-                            <tr>
-                                <td>Возраст сервера</td>
-                                <td>2 года</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
             </div>
         </div>
         
@@ -145,8 +111,13 @@
             }
             
             // По умолчанию показываем информацию о Ванилла сервере
+            // При загрузке страницы не показываем никакой информации о сервере
             document.addEventListener('DOMContentLoaded', function() {
-                showServerInfo('vanilla');
+                // Скрываем всю информацию о серверах при загрузке
+                const containers = document.querySelectorAll('.server-info-content');
+                containers.forEach(container => {
+                    container.style.display = 'none';
+                });
             });
         </script>
     </main>
