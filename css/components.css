@@ -84,7 +84,12 @@
 
 .badge.first    { background: #708ddb; }    
 .badge.second   { background: #9b4e94; }    
-.badge.third    { background: #5d3a7a; }    
+.badge.third    { background: #5d3a7a; }
+.badge.disabled {
+    background: #888 !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}    
 
 .badge.first:hover    { background: #6281d8; }
 .badge.second:hover   { background: #884582; }
