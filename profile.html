@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+</head>
+<body>
+    <header>
+        <!-- Шапка сайта будет здесь -->
+        <nav>
+            <!-- Навигация будет здесь -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-section">
+            <div class="container">
+                <h1>Личный кабинет</h1>
+                
+                <!-- Форма авторизации -->
+                <div class="auth-form-container">
+                    <form id="authForm" class="auth-form">
+                        <h2>Вход в аккаунт</h2>
+                        
+                        <div class="input-group">
+                            <label for="login">Логин или Email</label>
+                            <input type="text" id="login" name="login" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="password">Пароль</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Войти</button>
+                        
+                        <div class="form-footer">
+                            <a href="#" class="forgot-password">Забыли пароль?</a>
+                            <p>Нет аккаунта? <a href="#" class="register-link">Зарегистрироваться</a></p>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Информация о пользователе (после авторизации) -->
+                <div class="user-info-container" style="display: none;">
+                    <div class="user-info">
+                        <h2>Добро пожаловать, <span id="username">Имя пользователя</span>!</h2>
+                        <div class="user-details">
+                            <p><strong>Email:</strong> <span id="user-email">email@example.com</span></p>
+                            <p><strong>Дата регистрации:</strong> <span id="reg-date">01.01.2023</span></p>
+                            <p><strong>Статус:</strong> <span id="user-status">Игрок</span></p>
+                        </div>
+                        <button id="logoutBtn" class="btn-secondary">Выйти</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Подвал сайта будет здесь -->
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const authForm = document.getElementById('authForm');
+            const loginInput = document.getElementById('login');
+            const passwordInput = document.getElementById('password');
+            const authContainer = document.querySelector('.auth-form-container');
+            const userInfoContainer = document.querySelector('.user-info-container');
+            const usernameSpan = document.getElementById('username');
+            const userEmailSpan = document.getElementById('user-email');
+            const logoutBtn = document.getElementById('logoutBtn');
+            
+            // Обработка формы авторизации
+            authForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const login = loginInput.value.trim();
+                const password = passwordInput.value;
+                
+                // Здесь будет логика для проверки данных с сервером
+                // Пока что просто показываем информацию о пользователе
+                if(login && password) {
+                    // В реальном приложении тут будет AJAX запрос к серверу
+                    // Если авторизация успешна, показываем информацию о пользователе
+                    
+                    // Для демонстрации просто подставляем данные
+                    usernameSpan.textContent = login;
+                    userEmailSpan.textContent = login.includes('@') ? login : `${login}@example.com`;
+                    
+                    // Переключаем видимость блоков
+                    authContainer.style.display = 'none';
+                    userInfoContainer.style.display = 'block';
+                }
+            });
+            
+            // Обработка выхода из системы
+            logoutBtn.addEventListener('click', function() {
+                // Скрываем информацию о пользователе и показываем форму входа
+                authContainer.style.display = 'block';
+                userInfoContainer.style.display = 'none';
+                
+                // Очищаем поля формы
+                authForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
