@@ -34,7 +34,7 @@
     <main id="content" class="main-content">
         <div class="container">
             <div class="content-sections">
-                <section class="server-types panel" style="max-width: 800px; margin: 0 auto;">
+                <section class="server-types panel">
                     <div class="centered-content">
                         <h2 style="text-align: center;">Выберите тип сервера:</h2>
                         <div class="badges-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; justify-content: center;">
@@ -106,12 +106,6 @@
                 if(selectedBadge) {
                     selectedBadge.classList.add('selected');
                 }
-                
-                // Удалить класс centered-initially у секции сервера, чтобы она вернулась в нормальное положение
-                const serverTypesSection = document.querySelector('.server-types');
-                if(serverTypesSection) {
-                    serverTypesSection.classList.remove('centered-initially');
-                }
             }
             
             // По умолчанию показываем информацию о Ванилла сервере
@@ -122,12 +116,6 @@
                 containers.forEach(container => {
                     container.style.display = 'none';
                 });
-                
-                // Добавляем класс centered-initially к секции сервера при загрузке страницы
-                const serverTypesSection = document.querySelector('.server-types');
-                if(serverTypesSection && !serverTypesSection.classList.contains('centered-initially')) {
-                    serverTypesSection.classList.add('centered-initially');
-                }
             });
         </script>
     </main>
