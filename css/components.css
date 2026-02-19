@@ -89,6 +89,7 @@
     background: #888 !important;
     cursor: not-allowed;
     opacity: 0.6;
+    transform: scale(1);
 }    
 
 .badge.first:hover    { background: #6281d8; }
