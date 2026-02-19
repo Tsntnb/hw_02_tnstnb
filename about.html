@@ -34,27 +34,53 @@
     <main id="content" class="main-content">
         <div class="container">
             <div class="content-sections">
-                <section class="server-info panel">
-                    <h2>О сервере:</h2>
-                    <p>Наш Minecraft сервер - это активное сообщество игроков, объединённых любовью к игре. Мы предлагаем стабильную и производительную инфраструктуру, уникальные плагины и регулярные обновления.</p>
-                    <ul class="custom-list">
-                        <li>Стабильная работа 24/7</li>
-                        <li>Уникальные игровые режимы</li>
-                        <li>Активное сообщество</li>
-                        <li>Регулярные обновления</li>
-                    </ul>
+                <section class="server-types panel">
+                    <h2>Выберите тип сервера:</h2>
+                    <div class="badges-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                        <span class="badge first" onclick="showServerInfo('vanilla')">Ванилла</span>
+                        <span class="badge second" onclick="showServerInfo('survival')">Выживание</span>
+                        <span class="badge third" onclick="showServerInfo('rpg')">RPG</span>
+                    </div>
+                    
+                    <div id="server-info-container">
+                        <!-- Ванилла сервер -->
+                        <div id="vanilla-info" class="server-info-content">
+                            <h3>Ванилла сервер</h3>
+                            <p>Чистый Minecraft без модификаций и плагинов. Играйте в оригинальный опыт Mojang без каких-либо изменений. Идеально подходит для тех, кто хочет насладиться игрой в её изначальном виде.</p>
+                            <ul class="custom-list">
+                                <li>Чистый Minecraft без изменений</li>
+                                <li>Стабильная версия 1.20.4</li>
+                                <li>Регулярные обновления</li>
+                                <li>Без сторонних плагинов</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Выживание сервер -->
+                        <div id="survival-info" class="server-info-content" style="display: none;">
+                            <h3>Сервер Выживание</h3>
+                            <p>Классический сервер выживания с продвинутой экономикой, системой привилегий и уникальными возможностями. Создавайте базы, торгуйте с другими игроками и исследуйте огромный мир.</p>
+                            <ul class="custom-list">
+                                <li>Экономическая система</li>
+                                <li>Рейтинги и топы игроков</li>
+                                <li>Система привилегий</li>
+                                <li>Большие территории</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- RPG сервер -->
+                        <div id="rpg-info" class="server-info-content" style="display: none;">
+                            <h3>Сервер RPG</h3>
+                            <p>Ролевая игра с развитой системой квестов, классов и навыков. Погрузитесь в атмосферу фэнтези мира, где каждый ваш выбор влияет на развитие персонажа.</p>
+                            <ul class="custom-list">
+                                <li>Система классов и навыков</li>
+                                <li>Уникальные квесты</li>
+                                <li>Система развития персонажа</li>
+                                <li>Магия и свитки</li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
-
-                <section class="features panel">
-                    <h2>Функции сервера:</h2>
-                    <ul class="custom-list">
-                        <li>Survival с экономикой</li>
-                        <li>Minigames с еженедельными турнирами</li>
-                        <li>Factions с PvP боями</li>
-                        <li>Система привилегий</li>
-                    </ul>
-                </section>
-
+                
                 <section class="team panel">
                     <h2>Команда сервера:</h2>
                     <ul class="custom-list">
@@ -63,16 +89,6 @@
                         <li>Креативные дизайнеры</li>
                         <li>Активная модерация</li>
                     </ul>
-                </section>
-
-                <section class="history panel">
-                    <h2>История сервера:</h2>
-                    <ol class="custom-list">
-                        <li>Создание в 2023 году</li>
-                        <li>Первые 100 игроков</li>
-                        <li>Запуск уникальных плагинов</li>
-                        <li>Партнерство с известными стримерами</li>
-                    </ol>
                 </section>
 
                 <section class="stats panel">
@@ -102,6 +118,37 @@
                 </section>
             </div>
         </div>
+        
+        <script>
+            function showServerInfo(serverType) {
+                // Скрыть все контейнеры информации
+                const containers = document.querySelectorAll('.server-info-content');
+                containers.forEach(container => {
+                    container.style.display = 'none';
+                });
+                
+                // Показать выбранный контейнер
+                document.getElementById(`${serverType}-info`).style.display = 'block';
+                
+                // Обновить стиль бейджей
+                const badges = document.querySelectorAll('.badge');
+                badges.forEach(badge => {
+                    const badgeType = badge.getAttribute('onclick').split("'")[1];
+                    if(badgeType === serverType) {
+                        badge.style.transform = 'scale(1.1)';
+                        badge.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+                    } else {
+                        badge.style.transform = 'scale(1)';
+                        badge.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+                    }
+                });
+            }
+            
+            // По умолчанию показываем информацию о Ванилла сервере
+            document.addEventListener('DOMContentLoaded', function() {
+                showServerInfo('vanilla');
+            });
+        </script>
     </main>
 
     <!-- footer -->
