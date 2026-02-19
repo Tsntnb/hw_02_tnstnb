@@ -427,3 +427,11 @@ body {
     text-align: center;
     min-height: 1.5em; 
 }
+
+.text-inform {
+    margin-left: 1.5rem;
+}
+
+.h3-inform {
+    margin-top: 1rem;
+}
