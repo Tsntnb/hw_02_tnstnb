@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/adaptive.css">
-    <link rel="stylesheet" href="css/about-style.css">
+    <link rel="stylesheet" href="css/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="js/theme.js" defer></script>
 </head>
@@ -37,8 +37,8 @@
             <div class="content-sections">
                 <section class="server-types panel">
                     <div class="centered-content">
-                        <h2 style="text-align: center;">Выберите тип сервера:</h2>
-                        <div class="badges-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; justify-content: center;">
+                        <h2 style="text-align: center;">Выберите сервер:</h2>
+                        <div class="badges-container">
                             <span class="badge first" onclick="showServerInfo('vanilla')" id="vanilla-badge">Ванилла</span>
                             <span class="badge second" onclick="showServerInfo('survival')" id="survival-badge">Выживание</span>
                             <span class="badge third" onclick="showServerInfo('rpg')" id="rpg-badge">RPG</span>
@@ -47,7 +47,7 @@
                     
                     <div id="server-info-container">
                         <!-- Ванилла сервер -->
-                        <div id="vanilla-info" class="server-info-content" style="display: none;">
+                        <div id="vanilla-info" class="server-info-content">
                             <h3>Ванилла сервер</h3>
                             <p>Чистый Minecraft без модификаций и плагинов. Играйте в оригинальный опыт Mojang без каких-либо изменений. Идеально подходит для тех, кто хочет насладиться игрой в её изначальном виде.</p>
                             <ul class="custom-list">
@@ -59,7 +59,7 @@
                         </div>
                         
                         <!-- Выживание сервер -->
-                        <div id="survival-info" class="server-info-content" style="display: none;">
+                        <div id="survival-info" class="server-info-content">
                             <h3>Сервер Выживание</h3>
                             <p>Классический сервер выживания с продвинутой экономикой, системой привилегий и уникальными возможностями. Создавайте базы, торгуйте с другими игроками и исследуйте огромный мир.</p>
                             <ul class="custom-list">
@@ -71,7 +71,7 @@
                         </div>
                         
                         <!-- RPG сервер -->
-                        <div id="rpg-info" class="server-info-content" style="display: none;">
+                        <div id="rpg-info" class="server-info-content">
                             <h3>Сервер RPG</h3>
                             <p>Ролевая игра с развитой системой квестов, классов и навыков. Погрузитесь в атмосферу фэнтези мира, где каждый ваш выбор влияет на развитие персонажа.</p>
                             <ul class="custom-list">
@@ -86,7 +86,7 @@
             </div>
         </div>
         
-        <script src="js/about-script.js" defer></script>
+        <script src="js/about.js" defer></script>
     </main>
 
     <!-- footer -->
