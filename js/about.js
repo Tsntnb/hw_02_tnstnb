@@ -22,15 +22,15 @@ function showServerInfo(serverType) {
 
 // Определяем изображения для галерей
 const vanillaImages = [
-    'images/screenshots/vanilla1.png',
-    'images/screenshots/vanilla2.png'
+    'images/vanilla1.png',
+    'images/vanilla2.png'
 ];
 
 const survivalImages = [
-    'images/screenshots/survival1.png',
-    'images/screenshots/survival2.png',
-    'images/screenshots/survival3.png',
-    'images/screenshots/survival4.png'
+    'images/survival1.png',
+    'images/survival2.png',
+    'images/survival3.png',
+    'images/survival4.png'
 ];
 
 // Текущие индексы слайдов для каждой галереи
