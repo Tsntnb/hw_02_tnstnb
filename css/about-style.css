@@ -1,0 +1,37 @@
+/* Inline styles from about.html */
+.server-info-content h3 {
+    text-align: center;
+}
+
+.badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+/* Additional styles for server info content */
+.server-info-content {
+    /* Default styles for server information sections */
+}
+
+.server-info-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.server-info-content ul.custom-list {
+    padding-left: 1.5rem;
+}
+
+.server-info-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Style for selected badge */
+.badge.selected {
+    /* Add styling for selected badge if needed */
+    opacity: 0.8;
+    transform: scale(1.05);
+}
