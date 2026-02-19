@@ -31,7 +31,7 @@
 }
 
 .btn:hover {
-    background: #d35400;
+    background: #ee10c9cc;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(230, 126, 34, 0.4);
 }
