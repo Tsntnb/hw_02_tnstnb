@@ -1,37 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="О сервере — Saturnarium">
-    <meta name="author" content="Saturnarium Team">
-    <title>Saturnarium - Серверы</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/adaptive.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="js/theme.js" defer></script>
-</head>
-<body>
-    <!-- header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <h1 class="logo">Saturnarium</h1>
-                <nav aria-label="Основное меню">
-                    <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Главная</a></li>
-                        <li><a href="about.html" class="nav-link active">Серверы</a></li>
-                        <li><a href="fileforservers.html" class="nav-link">Файлы</a></li>
-                        <li><a href="rules.html" class="nav-link">Правила</a></li>
-                    </ul>
-                </nav>
-                
-            </div>
-        </div>
-    </header>
+<?php 
+$page_title = 'Saturnarium - Серверы';
+include 'header.php'; 
+?>
 
     <!-- main -->
     <main id="content" class="main-content">
@@ -125,39 +95,4 @@
         <script src="js/about.js" defer></script>
     </main>
 
-    <!-- footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Saturnarium</h3>
-                    <p>Официальный сайт проекта Saturnarium</p>
-                    <div class="social-links">
-                        <a href="https://discord.gg/C7YEfZ7TXm" class="social"><i class="fab fa-discord fa-2x"></i></a>
-                        <a href="https://www.youtube.com/@keystav6273/featured" class="social"><i class="fab fa-youtube fa-2x"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Навигация</h4>
-                    <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="about.html">Серверы</a></li>
-                        <li><a href="fileforservers.html">Файлы</a></li>
-                        <li><a href="rules.html">Правила</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Контакты</h4>
-                    <p>Email: team@saturnarium.ru</p>
-                    <p>Сервер: ip.saturnarium.ru</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <hr>
-                <p>&copy; 2026 Saturnarium. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-    
-</body>
-</html>
+<?php include 'footer.php'; ?>

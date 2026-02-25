@@ -1,28 +1,26 @@
 ```
-# PHP and web development related ignores
-*.php~
-*.php.bak
-*.html~
-*.html.bak
+# Compiled and build artifacts
+*.pyc
+__pycache__/
 
 # Dependencies
 vendor/
-
-# Logs and temp files
-*.log
-*.tmp
-*.swp
+composer.lock
 
 # Environment
 .env
 .env.local
-*.env.*
+.env.*
+
+# Logs and temp files
+*.log
+*.tmp
 
 # Editors
 .vscode/
 .idea/
 
-# OS specific
+# OS generated files
 .DS_Store
 Thumbs.db
 ```
